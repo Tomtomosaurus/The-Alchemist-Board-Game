@@ -12,6 +12,7 @@ void setup() {
   grid();
   fill(sand);
   rect(0, height*3/4, width, height);
+  Cursors();
 }
 void draw() {
   image(Santiago, SantiagoX, SantiagoY, width/16, height/16);
