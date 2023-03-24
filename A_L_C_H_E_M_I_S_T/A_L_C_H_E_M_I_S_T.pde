@@ -1,6 +1,10 @@
 float SantiagoX, SantiagoY, SantiagoWidth, SantiagoHeight;
+float FatimaX, FatimaY, FatimaWidth, FatimaHeight;
+float AlchemistX, AlchemistY, AlchemistWidth, AlchemistHeight;
 color sand = color(255, 229, 180);
 PImage Santiago;
+PImage Fatima;
+PImage Alchemist;
 
 void setup() {
   Santiago = loadImage("Images/Santiago.png");
@@ -8,6 +12,16 @@ void setup() {
   SantiagoY = height*5/8;
   SantiagoWidth = width/20;
   SantiagoHeight = height/16;
+  Fatima = loadImage("Images/Fatima.jpg");
+  FatimaWidth = SantiagoWidth;
+  FatimaHeight = SantiagoHeight;
+  FatimaX = FatimaWidth;
+  FatimaY = SantiagoY;
+  Alchemist = loadImage("Images/Alchemist.jpg");
+  AlchemistWidth = SantiagoWidth;
+  AlchemistHeight = SantiagoHeight;
+  AlchemistX = SantiagoX;
+  AlchemistY = SantiagoY + SantiagoHeight;
   //
   fullScreen();
   Cursors();
@@ -29,6 +43,34 @@ void draw() {
   if (SantiagoY < 0) {
     SantiagoY += SantiagoY*-1;
   }
+  //
+  image(Fatima, FatimaX, FatimaY, FatimaWidth,FatimaHeight);
+  if (FatimaX + FatimaWidth > width) {
+    FatimaX -= FatimaX-width+FatimaWidth;
+  }
+  if (FatimaY + FatimaHeight > height*3/4) {
+    FatimaY -= FatimaY-height*3/4+FatimaHeight*2;
+  }
+  if (FatimaX < 0) {
+    FatimaX += FatimaX*-2;
+  }
+  if (FatimaY < 0) {
+    FatimaY += FatimaY*-1;
+  }
+  //
+  image(Alchemist, AlchemistX, AlchemistY, AlchemistWidth, AlchemistHeight);
+  if (AlchemistX + AlchemistWidth > width) {
+    AlchemistX -= AlchemistX-width+AlchemistWidth*2;
+  }
+  if (AlchemistY + AlchemistHeight > height*3/4) {
+    AlchemistY -= AlchemistY-height*3/4+AlchemistHeight;
+  }
+  if (AlchemistX < height/8) {
+    AlchemistX += -1 * AlchemistX;
+  }
+  if (AlchemistY < 0) {
+    AlchemistY += AlchemistY*-1;
+  }
   fill(sand);
   rect(0, height*3/4, width, height);
 }
@@ -46,5 +88,31 @@ void keyPressed() {
   }
   if (key=='d' || key=='D') {
     SantiagoX += width/10;
+  }
+  //
+  if (key=='i' || key=='I') {
+    FatimaY -= height/8;
+  }
+  if (key=='k' || keyCode=='K') {
+    FatimaY += height/8;
+  }
+  if (key=='j' || keyCode=='J') {
+    FatimaX -= width/10;
+  }
+  if (key=='l' || keyCode=='L') {
+    FatimaX += width/10;
+  }
+  //
+  if (key=='t' || key=='T') {
+    AlchemistY -= height/8;
+  }
+  if (key=='g' || key=='G') {
+    AlchemistY += height/8;
+  }
+  if (key=='f' || key=='F') {
+    AlchemistX -= width/10;
+  }
+  if (key=='h' || key=='H') {
+    AlchemistX += width/10;
   }
 }
