@@ -1,10 +1,12 @@
 float SantiagoX, SantiagoY, SantiagoWidth, SantiagoHeight;
 float FatimaX, FatimaY, FatimaWidth, FatimaHeight;
 float AlchemistX, AlchemistY, AlchemistWidth, AlchemistHeight;
+float EnglishmanX, EnglishmanY, EnglishmanWidth, EnglishmanHeight;
 color sand = color(255, 229, 180);
 PImage Santiago;
 PImage Fatima;
 PImage Alchemist;
+PImage Englishman;
 
 void setup() {
   Santiago = loadImage("Images/Santiago.png");
@@ -22,6 +24,11 @@ void setup() {
   AlchemistHeight = SantiagoHeight;
   AlchemistX = SantiagoX;
   AlchemistY = SantiagoY + SantiagoHeight;
+  Englishman = loadImage("Images/Englishman.jpeg");
+  EnglishmanX = SantiagoWidth;
+  EnglishmanY = height*5/8 + SantiagoHeight;
+  EnglishmanWidth = width/20;
+  EnglishmanHeight = height/16;
   //
   fullScreen();
   Cursors();
@@ -44,7 +51,7 @@ void draw() {
     SantiagoY += SantiagoY*-1;
   }
   //
-  image(Fatima, FatimaX, FatimaY, FatimaWidth,FatimaHeight);
+  image(Fatima, FatimaX, FatimaY, FatimaWidth, FatimaHeight);
   if (FatimaX + FatimaWidth > width) {
     FatimaX -= FatimaX-width+FatimaWidth;
   }
@@ -69,8 +76,23 @@ void draw() {
     AlchemistX += -1 * AlchemistX;
   }
   if (AlchemistY < 0) {
-    AlchemistY += AlchemistY*-1;
+    AlchemistY += AlchemistY*-2;
   }
+  //
+  image(Englishman, EnglishmanX, EnglishmanY, EnglishmanWidth, EnglishmanHeight);
+  if (EnglishmanX + EnglishmanWidth > width) {
+    EnglishmanX -= EnglishmanX-width+EnglishmanWidth;
+  }
+  if (EnglishmanY + EnglishmanHeight > height*3/4) {
+    EnglishmanY -= EnglishmanY-height*3/4+EnglishmanHeight;
+  }
+  if (EnglishmanX < 0) {
+    EnglishmanX = EnglishmanX*-1;
+  }
+  if (EnglishmanY < 0) {
+    EnglishmanY += EnglishmanY*-2;
+  }
+  //
   fill(sand);
   rect(0, height*3/4, width, height);
 }
@@ -114,5 +136,20 @@ void keyPressed() {
   }
   if (key=='h' || key=='H') {
     AlchemistX += width/10;
+  }
+  //
+  if (key==CODED) {
+    if (keyCode==UP) {
+      EnglishmanY -= height/8;
+    }
+    if (keyCode==DOWN) {
+      EnglishmanY += height/8;
+    }
+    if (keyCode==LEFT) {
+      EnglishmanX -= width/10;
+    }
+    if (keyCode==RIGHT) {
+      EnglishmanX += width/10;
+    }
   }
 }
