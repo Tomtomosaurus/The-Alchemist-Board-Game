@@ -1,20 +1,26 @@
 float SantiagoX, SantiagoY, SantiagoWidth, SantiagoHeight;
-float SpareX, SpareY, SpareWidth, SpareHeight;
+float FatimaX, FatimaY, FatimaWidth, FatimaHeight;
+float AlchemistX, AlchemistY, AlchemistWidth, AlchemistHeight;
 color sand = color(255, 229, 180);
 PImage Santiago;
-PImage Spare;
+PImage Fatima;
+PImage Alchemist;
 void setup() {
   Santiago = loadImage("Images/Santiago.png");
   SantiagoX = 0;
   SantiagoY = height*5/8;
   SantiagoWidth = width/20;
   SantiagoHeight = height/16;
-  //CMD F to replace variables to the charater we want
-  Spare = loadImage("Images/Santiago.png");
-  SpareX = width * 0 +74;
-  SpareY = height*5/8;
-  SpareWidth = width/20;
-  SpareHeight = height/16;
+  Fatima = loadImage("Images/Fatima.jpg");
+  FatimaX = SantiagoWidth;
+  FatimaY = height*5/8;
+  FatimaWidth = width/20;
+  FatimaHeight = height/16;
+  Alchemist = loadImage("Images/Alchemist.jpg");
+  AlchemistX = 0;
+  AlchemistY = height*5/8 + SantiagoHeight;
+  AlchemistWidth = width/20;
+  AlchemistHeight = height/16;
   //
   fullScreen();
   Cursors();
@@ -23,7 +29,6 @@ void draw() {
   fill(255);
   rect(0, 0, width, height);
   grid();
-  //Santiago Stuff
   image(Santiago, SantiagoX, SantiagoY, SantiagoWidth, SantiagoHeight);
   if (SantiagoX + SantiagoWidth > width) {
     SantiagoX -= SantiagoX-width+SantiagoWidth*2;
@@ -37,22 +42,34 @@ void draw() {
   if (SantiagoY < 0) {
     SantiagoY += SantiagoY*-1;
   }
-  //End Santiago Stuff
-  //Start Spare Stuff
-  image(Spare, SpareX, SpareY, SpareWidth, SpareHeight);
-  if (SpareX + SpareWidth > width) {
-    SpareX -= SpareX-width+SpareWidth;
+  //
+  image(Fatima, FatimaX, FatimaY, FatimaWidth, FatimaHeight);
+  if (FatimaX + FatimaWidth > width) {
+    FatimaX -= FatimaX-width+FatimaWidth;
   }
-  if (SpareY + SpareHeight > height*3/4) {
-    SpareY -= SpareY-height*3/4+SpareHeight*2;
+  if (FatimaY + FatimaHeight > height*3/4) {
+    FatimaY -= FatimaY-height*3/4+FatimaHeight*2;
   }
-  if (SpareX < 0) {
-    SpareX = SpareX*-1;
+  if (FatimaX < 0) {
+    FatimaX = FatimaX*-1;
   }
-  if (SpareY < 0) {
-    SpareY += SpareY*-1;
+  if (FatimaY < 0) {
+    FatimaY += FatimaY*-1;
   }
-  //End Spare Stuff
+  //
+  image(Alchemist, AlchemistX, AlchemistY, AlchemistWidth, AlchemistHeight);
+  if (AlchemistX + AlchemistWidth > width) {
+    AlchemistX -= AlchemistX-width+AlchemistWidth*2;
+  }
+  if (AlchemistY + AlchemistHeight > height*3/4) {
+    AlchemistY -= AlchemistY-height*3/4+AlchemistHeight;
+  }
+  if (AlchemistX < 0) {
+    AlchemistX += AlchemistX*-1;
+  }
+  if (AlchemistY < 0) {
+    AlchemistY += AlchemistY*-2;
+  }
   fill(sand);
   rect(0, height*3/4, width, height);
 }
@@ -71,20 +88,30 @@ void keyPressed() {
   if (key=='d' || key=='D') {
     SantiagoX += width/10;
   }
-   if (key == CODED) {
-    if (keyCode == UP) 
-    SpareY -= height/8;
+  //
+  if (key=='i' || key=='I') {
+    FatimaY -= height/8;
   }
-  if (key == CODED) {
-    if (keyCode == DOWN) 
-    SpareY += height/8;
+  if (key=='k' || key=='K') {
+    FatimaY += height/8;
   }
-  if (key == CODED) {
-    if (keyCode == LEFT)  
-    SpareX -= width/10;
+  if (key=='j' || key=='J') {
+    FatimaX -= width/10;
   }
-  if (key == CODED) {
-    if (keyCode == RIGHT)
-    SpareX += width/10;
+  if (key=='l' || key=='L') {
+    FatimaX += width/10;
+  }
+  //
+  if (key=='t' || key=='T') {
+    AlchemistY -= height/8;
+  }
+  if (key=='g' || key=='G') {
+    AlchemistY += height/8;
+  }
+  if (key=='f' || key=='F') {
+    AlchemistX -= width/10;
+  }
+  if (key=='h' || key=='H') {
+    AlchemistX += width/10;
   }
 }
