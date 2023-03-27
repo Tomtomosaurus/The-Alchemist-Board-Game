@@ -11,6 +11,7 @@ PImage urimThummim;
 boolean start = false;
 
 void setup() {
+  background(255);
   Santiago = loadImage("Images/Santiago.png");
   SantiagoX = 0;
   SantiagoY = height*5/8;
@@ -36,15 +37,19 @@ void setup() {
   startButtonY = height/2;
   startButtonWidth = width/4;
   startButtonHeight = height/6;
+  numbersFont = createFont("arial", width/100);
   //
   fullScreen();
   Cursors();
 }
 void draw() {
+  splashScreen();
   if (start==true) {
-    fill(255);
+    fill(sand);
     rect(0, 0, width, height);
+    fill(0);
     grid();
+    numbers();
     image(Santiago, SantiagoX, SantiagoY, SantiagoWidth, SantiagoHeight);
     if (SantiagoX + SantiagoWidth > width) {
       SantiagoX -= SantiagoX-width+SantiagoWidth*2;
@@ -101,10 +106,7 @@ void draw() {
       EnglishmanY += EnglishmanY*-2;
     }
     //
-    fill(sand);
-    rect(0, height*3/4, width, height);
   }
-  splashScreen();
 }
 void mousePressed() {
   if (mouseX >= startButtonX && mouseY >= startButtonY && mouseX <= startButtonX+startButtonWidth && mouseY <= startButtonY+startButtonHeight) {
