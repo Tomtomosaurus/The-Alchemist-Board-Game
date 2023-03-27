@@ -12,5 +12,25 @@ void Englishman() {
   if (EnglishmanY < 0) {
     EnglishmanY += EnglishmanY*-2;
   }
-  if (EnglishmanX == SantiagoWidth && EnglishmanY == SantiagoHeight) EnglishmanWin = true;
+  if (EnglishmanX < width/10 && EnglishmanY < height/8) {
+    EnglishmanWin = true;
+    winAnimationEnglishman = true;
+  }
+}
+
+void movementEnglishman() {
+  if (key==CODED) {
+    if (keyCode==UP) {
+      EnglishmanY -= height/8;
+    }
+    if (keyCode==DOWN) {
+      EnglishmanY += height/8;
+    }
+    if (keyCode==LEFT) {
+      EnglishmanX -= width/10;
+    }
+    if (keyCode==RIGHT) {
+      EnglishmanX += width/10;
+    }
+  }
 }

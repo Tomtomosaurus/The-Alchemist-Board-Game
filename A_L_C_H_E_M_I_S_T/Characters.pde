@@ -12,3 +12,9 @@ void characters() {
     Englishman();
   }
 }
+void charactersMovement() {
+  movementAlchemist();
+  movementEnglishman();
+  movementFatima();
+  movementSantiago();
+}

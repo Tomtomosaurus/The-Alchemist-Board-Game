@@ -12,5 +12,28 @@ void Alchemist() {
   if (AlchemistY < 0) {
     AlchemistY += AlchemistY*-2;
   }
-  if (AlchemistX == 0 && AlchemistY == SantiagoHeight) AlchemistWin = true;
+  if (AlchemistX < width/10 && AlchemistY < height/8) {
+    AlchemistWin = true;
+    winAnimationAlchemist = true;
+  }
+  /*if (winAnimationAlchemist == true) {
+    if (AlchemistX < width*9/10 && AlchemistY > height/8) {
+      AlchemistX += width/10;
+    }
+  }<--- DO NOT TOUCH!!! FOR THOMAS TO CODE!!!*/
+}
+
+void movementAlchemist() {
+  if (key=='t' || key=='T') {
+    AlchemistY -= height/8;
+  }
+  if (key=='g' || key=='G') {
+    AlchemistY += height/8;
+  }
+  if (key=='f' || key=='F') {
+    AlchemistX -= width/10;
+  }
+  if (key=='h' || key=='H') {
+    AlchemistX += width/10;
+  }
 }

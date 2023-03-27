@@ -12,5 +12,23 @@ void Fatima() {
   if (FatimaY < 0) {
     FatimaY += FatimaY*-1;
   }
-  if (FatimaX == SantiagoWidth && FatimaY == 0) FatimaWin = true;
+  if (FatimaX < width/10 && FatimaY < height/8) {
+    FatimaWin = true;
+    winAnimationFatima = true;
+  }
+}
+
+void movementFatima() {
+  if (key=='i' || key=='I') {
+    FatimaY -= height/8;
+  }
+  if (key=='k' || key=='K') {
+    FatimaY += height/8;
+  }
+  if (key=='j' || key=='J') {
+    FatimaX -= width/10;
+  }
+  if (key=='l' || key=='L') {
+    FatimaX += width/10;
+  }
 }

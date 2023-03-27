@@ -12,5 +12,22 @@ void Santiago() {
   if (SantiagoY < 0) {
     SantiagoY += SantiagoY*-1;
   }
-  if (SantiagoX == 0 && SantiagoY == 0) SantiagoWin = true;
+  if (SantiagoX < width/10 && SantiagoY < height/8) {
+    SantiagoWin = true;
+    winAnimationSantiago = true;
+  }
+}
+void movementSantiago() {
+  if (key=='w' || key=='W') {
+    SantiagoY -= height/8;
+  }
+  if (key=='s' || key=='S') {
+    SantiagoY += height/8;
+  }
+  if (key=='a' || key=='A') {
+    SantiagoX -= width/10;
+  }
+  if (key=='d' || key=='D') {
+    SantiagoX += width/10;
+  }
 }
