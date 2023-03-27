@@ -49,7 +49,6 @@ void draw() {
     rect(0, 0, width, height);
     fill(0);
     grid();
-    numbers();
     image(Santiago, SantiagoX, SantiagoY, SantiagoWidth, SantiagoHeight);
     if (SantiagoX + SantiagoWidth > width) {
       SantiagoX -= SantiagoX-width+SantiagoWidth*2;
@@ -105,7 +104,7 @@ void draw() {
     if (EnglishmanY < 0) {
       EnglishmanY += EnglishmanY*-2;
     }
-    //
+    numbers();
   }
 }
 void mousePressed() {
