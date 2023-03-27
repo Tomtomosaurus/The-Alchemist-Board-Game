@@ -12,4 +12,5 @@ void Alchemist() {
   if (AlchemistY < 0) {
     AlchemistY += AlchemistY*-2;
   }
+  if (AlchemistX == 0 && AlchemistY == SantiagoHeight) AlchemistWin = true;
 }

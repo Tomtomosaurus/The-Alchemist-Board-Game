@@ -12,4 +12,5 @@ void Englishman() {
   if (EnglishmanY < 0) {
     EnglishmanY += EnglishmanY*-2;
   }
+  if (EnglishmanX == SantiagoWidth && EnglishmanY == SantiagoHeight) EnglishmanWin = true;
 }

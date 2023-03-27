@@ -8,7 +8,9 @@ PImage Fatima;
 PImage Alchemist;
 PImage Englishman;
 PImage urimThummim;
+PImage Treasure;
 boolean start = false;
+boolean SantiagoWin = false, FatimaWin = false, AlchemistWin = false, EnglishmanWin = false;
 
 void setup() {
   background(255);
@@ -38,6 +40,7 @@ void setup() {
   startButtonWidth = width/4;
   startButtonHeight = height/6;
   numbersFont = createFont("arial", width/100);
+  Treasure = loadImage("Images/Treasure.png");
   //
   fullScreen();
   Cursors();
@@ -51,6 +54,9 @@ void draw() {
     grid();
     characters();
     numbers();
+    if (SantiagoWin==true || FatimaWin==true || AlchemistWin==true || EnglishmanWin==true) {
+      image(Treasure, 0, height*5/8, width/10, height/8);
+    }
   }
 }
 void mousePressed() {

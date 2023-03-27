@@ -12,4 +12,5 @@ void Fatima() {
   if (FatimaY < 0) {
     FatimaY += FatimaY*-1;
   }
+  if (FatimaX == SantiagoWidth && FatimaY == 0) FatimaWin = true;
 }

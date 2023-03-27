@@ -12,4 +12,5 @@ void Santiago() {
   if (SantiagoY < 0) {
     SantiagoY += SantiagoY*-1;
   }
+  if (SantiagoX == 0 && SantiagoY == 0) SantiagoWin = true;
 }
