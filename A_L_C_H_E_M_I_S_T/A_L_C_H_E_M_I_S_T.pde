@@ -49,61 +49,7 @@ void draw() {
     rect(0, 0, width, height);
     fill(0);
     grid();
-    image(Santiago, SantiagoX, SantiagoY, SantiagoWidth, SantiagoHeight);
-    if (SantiagoX + SantiagoWidth > width) {
-      SantiagoX -= SantiagoX-width+SantiagoWidth*2;
-    }
-    if (SantiagoY + SantiagoHeight > height*3/4) {
-      SantiagoY -= SantiagoY-height*3/4+SantiagoHeight*2;
-    }
-    if (SantiagoX < 0) {
-      SantiagoX += SantiagoX*-1;
-    }
-    if (SantiagoY < 0) {
-      SantiagoY += SantiagoY*-1;
-    }
-    //
-    image(Fatima, FatimaX, FatimaY, FatimaWidth, FatimaHeight);
-    if (FatimaX + FatimaWidth > width) {
-      FatimaX -= FatimaX-width+FatimaWidth;
-    }
-    if (FatimaY + FatimaHeight > height*3/4) {
-      FatimaY -= FatimaY-height*3/4+FatimaHeight*2;
-    }
-    if (FatimaX < 0) {
-      FatimaX += FatimaX*-2;
-    }
-    if (FatimaY < 0) {
-      FatimaY += FatimaY*-1;
-    }
-    //
-    image(Alchemist, AlchemistX, AlchemistY, AlchemistWidth, AlchemistHeight);
-    if (AlchemistX + AlchemistWidth > width) {
-      AlchemistX -= AlchemistX-width+AlchemistWidth*2;
-    }
-    if (AlchemistY + AlchemistHeight > height*3/4) {
-      AlchemistY -= AlchemistY-height*3/4+AlchemistHeight;
-    }
-    if (AlchemistX < height/8) {
-      AlchemistX += -1 * AlchemistX;
-    }
-    if (AlchemistY < 0) {
-      AlchemistY += AlchemistY*-2;
-    }
-    //
-    image(Englishman, EnglishmanX, EnglishmanY, EnglishmanWidth, EnglishmanHeight);
-    if (EnglishmanX + EnglishmanWidth > width) {
-      EnglishmanX -= EnglishmanX-width+EnglishmanWidth;
-    }
-    if (EnglishmanY + EnglishmanHeight > height*3/4) {
-      EnglishmanY -= EnglishmanY-height*3/4+EnglishmanHeight;
-    }
-    if (EnglishmanX < 0) {
-      EnglishmanX = EnglishmanX*-1;
-    }
-    if (EnglishmanY < 0) {
-      EnglishmanY += EnglishmanY*-2;
-    }
+    characters();
     numbers();
   }
 }
