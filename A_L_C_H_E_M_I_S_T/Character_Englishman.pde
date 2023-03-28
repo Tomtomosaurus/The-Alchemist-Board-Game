@@ -16,6 +16,35 @@ void Englishman() {
     EnglishmanWin = true;
     winAnimationEnglishman = true;
   }
+  if (winAnimationEnglishman) {
+    if (EnglishmanX < width*9/10) {
+      if (EnglishmanY < height/8) {
+        EnglishmanX += width/10;
+      }
+      if (EnglishmanY > height/4 && EnglishmanY < height*3/8) {
+        EnglishmanX += width/10;
+      }
+      if (EnglishmanY > height/2 && EnglishmanY < height*5/8) {
+        EnglishmanX += width/10;
+      }
+    }
+    if (EnglishmanX > width/10) {
+      if (EnglishmanY > height/8 && EnglishmanY < height/4) {
+        EnglishmanX -= width/10;
+      }
+      if (EnglishmanY > height*3/8 && EnglishmanY < height/2) {
+        EnglishmanX -= width/10;
+      }
+      if (EnglishmanY > height*5/8 && EnglishmanY < height*3/4) {
+        EnglishmanX -= width/10;
+      }
+    }
+    if (EnglishmanY < height*5/8) {
+      if (EnglishmanX < width/10 || EnglishmanX >= width*9/10) {
+        EnglishmanY += height/8;
+      }
+    }
+  }
 }
 
 void movementEnglishman() {

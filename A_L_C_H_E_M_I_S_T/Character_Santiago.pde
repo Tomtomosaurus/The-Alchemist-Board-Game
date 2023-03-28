@@ -16,6 +16,35 @@ void Santiago() {
     SantiagoWin = true;
     winAnimationSantiago = true;
   }
+  if (winAnimationSantiago) {
+    if (SantiagoX < width*9/10) {
+      if (SantiagoY < height/8) {
+        SantiagoX += width/10;
+      }
+      if (SantiagoY > height/4 && SantiagoY < height*3/8) {
+        SantiagoX += width/10;
+      }
+      if (SantiagoY >= height/2 && SantiagoY < height*5/8) {
+        SantiagoX += width/10;
+      }
+    }
+    if (SantiagoX > 0) {
+      if (SantiagoY > height/8 && SantiagoY < height/4) {
+        SantiagoX -= width/10;
+      }
+      if (SantiagoY > height*3/8 && SantiagoY < height/2) {
+        SantiagoX -= width/10;
+      }
+      if (SantiagoY >= height*5/8 && SantiagoY < height*3/4) {
+        SantiagoX -= width/10;
+      }
+    }
+    if (SantiagoY < height*5/8) {
+      if (SantiagoX < width/10 || SantiagoX >= width*9/10) {
+        SantiagoY += height/8;
+      }
+    }
+  }
 }
 void movementSantiago() {
   if (key=='w' || key=='W') {

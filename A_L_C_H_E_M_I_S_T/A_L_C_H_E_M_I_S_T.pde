@@ -27,11 +27,11 @@ void draw() {
     rect(0, 0, width, height);
     fill(0);
     grid();
-    characters();
-    numbers();
     if (SantiagoWin==true || FatimaWin==true || AlchemistWin==true || EnglishmanWin==true) {
       image(Treasure, 0, height*5/8, width/10, height/8);
     }
+    characters();
+    numbers();
   }
 }
 void mousePressed() {

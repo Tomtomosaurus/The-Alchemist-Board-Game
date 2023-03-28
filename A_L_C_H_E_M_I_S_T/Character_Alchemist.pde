@@ -16,11 +16,35 @@ void Alchemist() {
     AlchemistWin = true;
     winAnimationAlchemist = true;
   }
-  /*if (winAnimationAlchemist == true) {
-    if (AlchemistX < width*9/10 && AlchemistY > height/8) {
-      AlchemistX += width/10;
+  if (winAnimationAlchemist) {
+    if (AlchemistX < width*9/10) {
+      if (AlchemistY < height/8) {
+        AlchemistX += width/10;
+      }
+      if (AlchemistY > height/4 && AlchemistY < height*3/8) {
+        AlchemistX += width/10;
+      }
+      if (AlchemistY > height/2 && AlchemistY < height*5/8) {
+        AlchemistX += width/10;
+      }
     }
-  }<--- DO NOT TOUCH!!! FOR THOMAS TO CODE!!!*/
+    if (AlchemistX > 0) {
+      if (AlchemistY > height/8 && AlchemistY < height/4) {
+        AlchemistX -= width/10;
+      }
+      if (AlchemistY > height*3/8 && AlchemistY < height/2) {
+        AlchemistX -= width/10;
+      }
+      if (AlchemistY > height*5/8 && AlchemistY < height*3/4) {
+        AlchemistX -= width/10;
+      }
+    }
+    if (AlchemistY < height*5/8) {
+      if (AlchemistX < width/10 || AlchemistX >= width*9/10) {
+        AlchemistY += height/8;
+      }
+    }
+  }
 }
 
 void movementAlchemist() {

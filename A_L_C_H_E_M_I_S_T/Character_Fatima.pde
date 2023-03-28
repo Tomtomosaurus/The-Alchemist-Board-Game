@@ -16,6 +16,35 @@ void Fatima() {
     FatimaWin = true;
     winAnimationFatima = true;
   }
+  if (winAnimationFatima) {
+    if (FatimaX < width*9/10) {
+      if (FatimaY < height/8) {
+        FatimaX += width/10;
+      }
+      if (FatimaY > height/4 && FatimaY < height*3/8) {
+        FatimaX += width/10;
+      }
+      if (FatimaY >= height/2 && FatimaY < height*5/8) {
+        FatimaX += width/10;
+      }
+    }
+    if (FatimaX > width/10) {
+      if (FatimaY > height/8 && FatimaY < height/4) {
+        FatimaX -= width/10;
+      }
+      if (FatimaY > height*3/8 && FatimaY < height/2) {
+        FatimaX -= width/10;
+      }
+      if (FatimaY >= height*5/8 && FatimaY < height*3/4) {
+        FatimaX -= width/10;
+      }
+    }
+    if (FatimaY < height*5/8) {
+      if (FatimaX < width/10 || FatimaX >= width*9/10) {
+        FatimaY += height/8;
+      }
+    }
+  }
 }
 
 void movementFatima() {
