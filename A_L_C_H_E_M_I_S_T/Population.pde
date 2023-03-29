@@ -28,7 +28,10 @@ void setupPopulation() {
   startFont = createFont("Papyrus", width/20);
   Treasure = loadImage("Images/Treasure.png");
   Caravan = loadImage("Images/Caravan.jpeg");
+<<<<<<< HEAD
   oasis = loadImage("Images/oasis.png");
+=======
+>>>>>>> 313d1af6d54dd2d1f495e1cfe2ae7b6184a4be4c
   degTSY = 360;
   radTSY = radians(degTSY);
   deg1 = -27.5;
