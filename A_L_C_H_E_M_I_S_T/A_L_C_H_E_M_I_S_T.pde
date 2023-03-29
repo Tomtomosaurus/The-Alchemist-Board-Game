@@ -9,9 +9,12 @@ PImage Alchemist;
 PImage Englishman;
 PImage urimThummim;
 PImage Treasure;
+PImage Caravan;
 boolean start = false;
 boolean SantiagoWin = false, FatimaWin = false, AlchemistWin = false, EnglishmanWin = false;
 boolean winAnimationSantiago = false, winAnimationFatima = false, winAnimationAlchemist = false, winAnimationEnglishman = false;
+float degTSY, radTSY;
+float deg1, rad1;
 
 void setup() {
   background(255);
@@ -26,12 +29,14 @@ void draw() {
     fill(sand);
     rect(0, 0, width, height);
     fill(0);
-    grid();
     if (SantiagoWin==true || FatimaWin==true || AlchemistWin==true || EnglishmanWin==true) {
       image(Treasure, 0, height*5/8, width/10, height/8);
     }
+    Caravan();
+    grid();
     characters();
     numbers();
+    bottomBar();
   }
 }
 void mousePressed() {

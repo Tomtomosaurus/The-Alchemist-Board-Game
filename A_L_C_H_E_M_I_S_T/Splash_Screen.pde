@@ -1,4 +1,5 @@
 float startButtonX, startButtonY, startButtonWidth, startButtonHeight;
+PFont startFont;
 
 void splashScreen() {
   if (start==false) {
@@ -6,12 +7,15 @@ void splashScreen() {
     rect(0, 0, width, height);
     fill(0);
     rect(width/6, height/6, width*2/3, height*2/3);
+    textFont(startFont);
     if (mouseX >= startButtonX && mouseY >= startButtonY && mouseX <= startButtonX+startButtonWidth && mouseY <= startButtonY+startButtonHeight) {
-      tint(127.5, 127.5);
+      fill(127.5);
     } else {
-      noTint();
+      fill(255);
     }
-    image(urimThummim, startButtonX, startButtonY, startButtonWidth, startButtonHeight);
-    noTint();
+    textAlign(CENTER);
+    text("START", startButtonX, startButtonY, startButtonWidth, startButtonHeight);
+    fill(0);
+    textAlign(LEFT);
   }
 }
