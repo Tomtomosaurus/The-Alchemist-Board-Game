@@ -10,10 +10,7 @@ PImage Englishman;
 PImage urimThummim;
 PImage Treasure;
 PImage Caravan;
-<<<<<<< HEAD
 PImage oasis;
-=======
->>>>>>> 313d1af6d54dd2d1f495e1cfe2ae7b6184a4be4c
 boolean start = false;
 boolean SantiagoWin = false, FatimaWin = false, AlchemistWin = false, EnglishmanWin = false;
 boolean winAnimationSantiago = false, winAnimationFatima = false, winAnimationAlchemist = false, winAnimationEnglishman = false;
@@ -37,10 +34,7 @@ void draw() {
       image(Treasure, 0, height*5/8, width/10, height/8);
     }
     Caravan();
-<<<<<<< HEAD
     //oasis();
-=======
->>>>>>> 313d1af6d54dd2d1f495e1cfe2ae7b6184a4be4c
     grid();
     characters();
     numbers();
