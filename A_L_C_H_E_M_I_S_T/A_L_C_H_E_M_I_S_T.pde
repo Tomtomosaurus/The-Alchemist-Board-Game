@@ -3,6 +3,7 @@ float FatimaX, FatimaY, FatimaWidth, FatimaHeight;
 float AlchemistX, AlchemistY, AlchemistWidth, AlchemistHeight;
 float EnglishmanX, EnglishmanY, EnglishmanWidth, EnglishmanHeight;
 color sand = color(255, 229, 180);
+color red = color(255, 0, 0);
 PImage Santiago;
 PImage Fatima;
 PImage Alchemist;
@@ -14,6 +15,7 @@ PImage oasis;
 boolean start = false;
 boolean SantiagoWin = false, FatimaWin = false, AlchemistWin = false, EnglishmanWin = false;
 boolean winAnimationSantiago = false, winAnimationFatima = false, winAnimationAlchemist = false, winAnimationEnglishman = false;
+boolean urimThummimPressed = false;
 float degTSY, radTSY;
 float deg1, rad1;
 
@@ -46,6 +48,7 @@ void mousePressed() {
   if (mouseX >= startButtonX && mouseY >= startButtonY && mouseX <= startButtonX+startButtonWidth && mouseY <= startButtonY+startButtonHeight) {
     start=true;
   }
+  bottomBarMousePressed();
 }
 void keyPressed() {
   if (start==true) {

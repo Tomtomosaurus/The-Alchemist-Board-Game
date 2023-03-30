@@ -10,4 +10,14 @@ void bottomBar() {
   noTint();
   textFont(urimThummimNumberFont);
   text(urimThummimNumberText, width/5+width/100, height*97.5/100);
+  if (urimThummimPressed && urimThummimNumber > 1 && urimThummimNumber < 10) {
+    fill(sand);
+    rect(0, 0, width, height);
+    fill(red);
+  }
+}
+void bottomBarMousePressed() {
+  if (urimThummimPressed == false && mouseX >= 0 && mouseY >= height*3/4 && mouseX <= width/5 && mouseY <= height*3/4+height/4) {
+    urimThummimPressed = true;
+  }
 }
