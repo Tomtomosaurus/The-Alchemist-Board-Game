@@ -33,8 +33,7 @@ void draw() {
     if (SantiagoWin==true || FatimaWin==true || AlchemistWin==true || EnglishmanWin==true) {
       image(Treasure, 0, height*5/8, width/10, height/8);
     }
-    oasis();
-    //Caravan();
+    Caravan();
     //oasis();
     grid();
     characters();
