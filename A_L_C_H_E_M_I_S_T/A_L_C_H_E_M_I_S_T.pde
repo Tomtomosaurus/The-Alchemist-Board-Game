@@ -34,7 +34,7 @@ void draw() {
       image(Treasure, 0, height*5/8, width/10, height/8);
     }
     Caravan();
-    //oasis();
+    oasis();
     grid();
     characters();
     numbers();

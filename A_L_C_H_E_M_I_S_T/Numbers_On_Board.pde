@@ -3,10 +3,7 @@ PFont numbersFont;
 void numbers() {
   textFont(numbersFont);
   //line 1
-<<<<<<< HEAD
   fill(#FF0000);
-=======
->>>>>>> 313d1af6d54dd2d1f495e1cfe2ae7b6184a4be4c
   text("1", width*0/10+width/500, height*5/8+width/100);
   text("2", width*1/10+width/500, height*5/8+width/100);
   text("3", width*2/10+width/500, height*5/8+width/100);
