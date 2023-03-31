@@ -8,6 +8,7 @@ float rulesButtonX, rulesButtonY, rulesButtonWidth, rulesButtonHeight;
 PFont rulesFont;
 boolean rules = false;
 float exitRulesButtonX, exitRulesButtonY, exitRulesButtonWidth, exitRulesButtonHeight;
+PFont ruleLineFont;
 
 
 void splashScreen() {
@@ -64,8 +65,19 @@ void splashScreen() {
       } else {
         fill(255);
       }
-      text("RULES", exitRulesButtonX, exitRulesButtonY, exitRulesButtonWidth, exitRulesButtonHeight);
+      text("BACK", exitRulesButtonX, exitRulesButtonY, exitRulesButtonWidth, exitRulesButtonHeight);
       textAlign(LEFT);
+      textFont(ruleLineFont);
+      fill(255);
+      text(" 1. ", width/6, height/6, width*2/3, height/6);
+      text(" 2. ", width/6, height*3/12, width*2/3, height/6);
+      text(" 3. ", width/6, height*4/12, width*2/3, height/6);
+      text(" 5. ", width/6, height/6, width*2/3, height/6);
+      text(" 6. ", width/6, height/6, width*2/3, height/6);
+      text(" 7. ", width/6, height/6, width*2/3, height/6);
+      text(" 8. ", width/6, height/6, width*2/3, height/6);
+      text(" 9. ", width/6, height/6, width*2/3, height/6);
+      text(" 10. ", width/6, height/6, width*2/3, height/6);
     }
     //
     fill(255);

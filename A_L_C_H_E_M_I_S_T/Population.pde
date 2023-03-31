@@ -49,6 +49,7 @@ void setupPopulation() {
   subtitleY = titleY+titleHeight/2;
   subtitleWidth = titleWidth;
   subtitleHeight = titleHeight;
+  ruleLineFont = createFont("Papyrus", width/50);
 }
 void drawPopulation() {
   if (start) {
