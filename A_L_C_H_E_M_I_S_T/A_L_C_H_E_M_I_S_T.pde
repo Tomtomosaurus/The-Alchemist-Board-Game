@@ -15,6 +15,9 @@ PImage urimThummim;
 PImage Treasure;
 PImage Caravan;
 PImage oasis;
+PImage Alley;
+PImage Sheep;
+PImage Gold;
 boolean start = false;
 boolean SantiagoWin = false, FatimaWin = false, AlchemistWin = false, EnglishmanWin = false;
 boolean winAnimationSantiago = false, winAnimationFatima = false, winAnimationAlchemist = false, winAnimationEnglishman = false;
@@ -38,6 +41,10 @@ void draw() {
       image(Treasure, 0, height*5/8, width/10, height/8);
     }
     Caravan();
+    Darkness();
+    oasis();
+    Golden();
+    Sheeps();
     grid();
     characters();
     numbers();

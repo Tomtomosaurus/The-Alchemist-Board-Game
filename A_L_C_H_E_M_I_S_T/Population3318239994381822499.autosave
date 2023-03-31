@@ -28,10 +28,7 @@ void setupPopulation() {
   startFont = createFont("Papyrus", width/20);
   Treasure = loadImage("Images/Treasure.png");
   Caravan = loadImage("Images/Caravan.jpeg");
-  oasis = loadImage("Images/oasis.png");
-  Alley = loadImage("Images/alley.jpeg");
-  Gold = loadImage("Images/gold.jpeg");
-  Sheep = loadImage("Images/iwantover.png");
+  oasis = loadImage("Images/oasis4.png");
   degTSY = 360;
   radTSY = radians(degTSY);
   deg1 = -27.5;
@@ -39,32 +36,15 @@ void setupPopulation() {
   urimThummimNumber = random(1, 60);
   urimThummimNumberText = String.valueOf(urimThummimNumber);
   urimThummimNumberFont = createFont("Papyrus", height*5/16);
+  quitX = width*1/3;
+  quitY = height*1/99999999;
+  QuitButtonW = width*1/3/2;
+  QuitButtonH = height*1/3*0.334;
+  StartX = width*1/3;
+  StartY = height*1/3;
+  StartW = width*1/3/2;
+  StartH = height*1/3*0.334;
+  
 }
 void drawPopulation() {
-  if (start) {
-    quitButtonWidth = width/5;
-    quitButtonHeight = height/8;
-    quitButtonX = width*4/5;
-    quitButtonY = height*7/8;
-    quitFont = createFont("Papyrus", width/20);
-  } else {
-    quitButtonWidth = width/10;
-    quitButtonHeight = height/20;
-    quitButtonX = width/2 - quitButtonWidth/2;
-    quitButtonY = startButtonY + startButtonHeight + width/20;
-    quitFont = createFont("Papyrus", width/50);
-  }
-  quitButtonTextWidth = quitButtonWidth;
-  quitButtonTextHeight = quitButtonHeight;
-  quitButtonTextX = quitButtonX;
-  quitButtonTextY = quitButtonY;
-  resetFont = quitFont;
-  resetButtonWidth = quitButtonWidth;
-  resetButtonHeight = quitButtonHeight;
-  resetButtonX = quitButtonX;
-  resetButtonY = quitButtonY - resetButtonHeight;
-  resetButtonTextWidth = quitButtonWidth;
-  resetButtonTextHeight = quitButtonHeight;
-  resetButtonTextX = quitButtonX;
-  resetButtonTextY = quitButtonY - resetButtonHeight;
 }
