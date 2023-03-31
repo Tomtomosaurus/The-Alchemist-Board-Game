@@ -69,14 +69,14 @@ void splashScreen() {
       textAlign(LEFT);
       textFont(ruleLineFont);
       fill(255);
-      text(" 1. ", width/6, height/6, width*2/3, height/6);
-      text(" 2. ", width/6, height*3/12, width*2/3, height/6);
-      text(" 3. ", width/6, height*4/12, width*2/3, height/6);
-      text(" 5. ", width/6, height*5/12, width*2/3, height/6);
-      text(" 6. ", width/6, height*6/12, width*2/3, height/6);
-      text(" 7. ", width/6, height*7/12, width*2/3, height/6);
-      text(" 8. ", width/6, height*8/12, width*2/3, height/6);
-      text(" 9. ", width/6, height*9/12, width*2/3, height/6);
+      text(" 1. Each character is controlled by one person. ", width/6, height/6, width*2/3, height/6);
+      text(" 2. The number shown on the generator is the number of tiles you move up.", width/6, height*3/12, width*2/3, height/6);
+      text(" 3. The player party may choose the maximum number on their generator (6 is recommended).", width/6, height*4/12, width*2/3, height/6);
+      text(" 4. After everyone has had 5 turns, click on Urim and Thummim to get a random number.                                                           Everyone then votes on whether they should go up or down by that number.", width/6, height*5/12, width*2/3, height/6);
+      text(" 5. If someone has to go forward by an amount and lands on the last square, they have to go back by however many more moves they still have left over in their turn ( The opposite is true).", width/6, height*6/12, width*2/3, height/6);
+      text(" 6. If you land on the top of a distraction, go to the square on the opposite end of it.", width/6, height*7/12, width*2/3, height/6);
+      text(" 7. If you land on the bottom of a traction, go to the square on the opposite end of it.", width/6, height*8/12, width*2/3, height/6);
+      text(" 8. There may only be one winner.", width/6, height*9/12, width*2/3, height/6);
     }
     //
     fill(255);
