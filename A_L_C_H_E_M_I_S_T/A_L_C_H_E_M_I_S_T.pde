@@ -2,8 +2,19 @@ float SantiagoX, SantiagoY, SantiagoWidth, SantiagoHeight;
 float FatimaX, FatimaY, FatimaWidth, FatimaHeight;
 float AlchemistX, AlchemistY, AlchemistWidth, AlchemistHeight;
 float EnglishmanX, EnglishmanY, EnglishmanWidth, EnglishmanHeight;
+float quitX, quitY, QuitButtonW, QuitButtonH;
+float StartX, StartY, StartW, StartH;
+int NormalSize = 25, smallSize = 20, bigSize = 35;
+PFont Font, Font1, Bold, Font2, Font3;
+Font = createFont("TimesNewRomanPS-BoldItalicMT", 600);
+String quitText = "Exit (E)";
+float QuitTX, QuitTY, QuitTW, QuitTH;
+PFont QuitF;
 color sand = color(255, 229, 180);
 color red = color(255, 0, 0);
+color buttonFill;
+color White = (#FFFFFF);
+color green = (#00FF00);
 PImage Santiago;
 PImage Fatima;
 PImage Alchemist;
@@ -39,6 +50,7 @@ void draw() {
     numbers();
     bottomBar();
     bottomBarMousePressed();
+    quitButton();
   }
   debugging();
 }
