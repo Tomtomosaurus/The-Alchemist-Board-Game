@@ -33,7 +33,7 @@ void setupPopulation() {
   radTSY = radians(degTSY);
   deg1 = -27.5;
   rad1 = radians(deg1);
-  urimThummimNumber = random(60);
+  urimThummimNumber = random(1, 60);
   urimThummimNumberText = String.valueOf(urimThummimNumber);
   urimThummimNumberFont = createFont("Papyrus", height*5/16);
 }
