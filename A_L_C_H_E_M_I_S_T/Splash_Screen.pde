@@ -72,12 +72,11 @@ void splashScreen() {
       text(" 1. ", width/6, height/6, width*2/3, height/6);
       text(" 2. ", width/6, height*3/12, width*2/3, height/6);
       text(" 3. ", width/6, height*4/12, width*2/3, height/6);
-      text(" 5. ", width/6, height/6, width*2/3, height/6);
-      text(" 6. ", width/6, height/6, width*2/3, height/6);
-      text(" 7. ", width/6, height/6, width*2/3, height/6);
-      text(" 8. ", width/6, height/6, width*2/3, height/6);
-      text(" 9. ", width/6, height/6, width*2/3, height/6);
-      text(" 10. ", width/6, height/6, width*2/3, height/6);
+      text(" 5. ", width/6, height*5/12, width*2/3, height/6);
+      text(" 6. ", width/6, height*6/12, width*2/3, height/6);
+      text(" 7. ", width/6, height*7/12, width*2/3, height/6);
+      text(" 8. ", width/6, height*8/12, width*2/3, height/6);
+      text(" 9. ", width/6, height*9/12, width*2/3, height/6);
     }
     //
     fill(255);

@@ -62,7 +62,7 @@ void drawPopulation() {
     quitButtonWidth = width/10;
     quitButtonHeight = height/20;
     quitButtonX = width/2 - quitButtonWidth/2;
-    quitButtonY = startButtonY + startButtonHeight + width/20;
+    quitButtonY = height*5/6-quitButtonHeight;
     quitFont = createFont("Papyrus", width/50);
   }
   quitButtonTextWidth = quitButtonWidth;
