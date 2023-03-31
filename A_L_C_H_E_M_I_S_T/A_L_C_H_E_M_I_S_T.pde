@@ -67,6 +67,15 @@ void mousePressed() {
     EnglishmanWin = false;
     start = false;
     urimThummimPressed = false;
+    rules = false;
+  }
+  if (start==false) {
+    if (rules == false && mouseX >= rulesButtonX && mouseY >= rulesButtonY && mouseX <= rulesButtonX+rulesButtonWidth && mouseY <= rulesButtonY+rulesButtonHeight) {
+      rules = true;
+    }
+    if (rules && mouseX >= exitRulesButtonX && mouseY >= exitRulesButtonY && mouseX <= exitRulesButtonX+exitRulesButtonWidth && mouseY <= exitRulesButtonY+exitRulesButtonHeight) {
+      rules = false;
+    }
   }
 }
 void keyPressed() {

@@ -25,7 +25,7 @@ void setupPopulation() {
   startButtonWidth = width/4;
   startButtonHeight = height/6;
   numbersFont = createFont("Papyrus", width/100);
-  startFont = createFont("Papyrus", width/20);
+  startFont = createFont("Papyrus", width/30);
   Treasure = loadImage("Images/Treasure.png");
   Caravan = loadImage("Images/Caravan.jpeg");
   oasis = loadImage("Images/oasis.png");
@@ -39,11 +39,16 @@ void setupPopulation() {
   urimThummimNumber = random(1, 60);
   urimThummimNumberText = String.valueOf(urimThummimNumber);
   urimThummimNumberFont = createFont("Papyrus", height*5/16);
-  titleFont = createFont("Papyrus", height/12);
+  titleFont = createFont("Papyrus", height/15);
   titleWidth = width*2/3;
   titleHeight = height/6;
   titleX = width/6;
   titleY = height/6;
+  subtitleFont = createFont("Papyrus", height/30);
+  subtitleX = titleX;
+  subtitleY = titleY+titleHeight/2;
+  subtitleWidth = titleWidth;
+  subtitleHeight = titleHeight;
 }
 void drawPopulation() {
   if (start) {
@@ -72,4 +77,13 @@ void drawPopulation() {
   resetButtonTextHeight = quitButtonHeight;
   resetButtonTextX = quitButtonX;
   resetButtonTextY = quitButtonY - resetButtonHeight;
+  rulesFont = quitFont;
+  rulesButtonX = quitButtonX;
+  rulesButtonY = startButtonY - startButtonHeight/2;
+  rulesButtonWidth = quitButtonWidth;
+  rulesButtonHeight = quitButtonHeight;
+  exitRulesButtonWidth = quitButtonWidth;
+  exitRulesButtonHeight = quitButtonHeight;
+  exitRulesButtonX = width*5/6-rulesButtonWidth;
+  exitRulesButtonY = height*5/6-rulesButtonHeight;
 }
