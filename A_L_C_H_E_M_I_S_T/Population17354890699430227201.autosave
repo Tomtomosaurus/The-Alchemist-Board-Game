@@ -25,13 +25,10 @@ void setupPopulation() {
   startButtonWidth = width/4;
   startButtonHeight = height/6;
   numbersFont = createFont("Papyrus", width/100);
-  startFont = createFont("Papyrus", width/20);
+  startFont = createFont("Papyrus", width/30);
   Treasure = loadImage("Images/Treasure.png");
   Caravan = loadImage("Images/Caravan.jpeg");
-  oasis = loadImage("Images/oasis.png");
-  Alley = loadImage("Images/alley.jpeg");
-  Gold = loadImage("Images/gold.jpeg");
-  Sheep = loadImage("Images/iwantover.png");
+  oasis = loadImage("Images/oasis4.png");
   degTSY = 360;
   radTSY = radians(degTSY);
   deg1 = -27.5;
@@ -39,7 +36,7 @@ void setupPopulation() {
   urimThummimNumber = random(1, 60);
   urimThummimNumberText = String.valueOf(urimThummimNumber);
   urimThummimNumberFont = createFont("Papyrus", height*5/16);
-  titleFont = createFont("Papyrus", height/12);
+  titleFont = createFont("Papyrus", height/15);
   titleWidth = width*2/3;
   titleHeight = height/6;
   titleX = width/6;

@@ -1,6 +1,6 @@
 float startButtonX, startButtonY, startButtonWidth, startButtonHeight;
-PFont startFont;
 float titleX, titleY, titleWidth, titleHeight;
+PFont startFont;
 PFont titleFont;
 
 void splashScreen() {
@@ -17,13 +17,11 @@ void splashScreen() {
     }
     textAlign(CENTER, CENTER);
     text("START", startButtonX, startButtonY, startButtonWidth, startButtonHeight);
-    fill(0);
-    textAlign(LEFT);
     quitButton();
     fill(255);
     textAlign(CENTER, CENTER);
     textFont(titleFont);
-    text("SNAKES AND LADDERS", titleX, titleY, titleWidth, titleHeight);
+    text("THE ALCHEMISTS' QUEST", titleX, titleY, titleWidth, titleHeight);
     textAlign(LEFT);
   }
 }
