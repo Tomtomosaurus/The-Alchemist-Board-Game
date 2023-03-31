@@ -4,7 +4,6 @@ void quitButton() {
   } else {
     buttonFill = red;
   }
-  if (mouseX> quitX && mouseX< quitX+QuitButtonW && mouseY> quitY && mouseY< quitY+QuitButtonH) exit();
   //End Hover-over
   fill(buttonFill);
   rect(quitX, quitY, QuitButtonW, QuitButtonH);
@@ -16,6 +15,6 @@ void quitButton() {
   QuitTH = StartH;
   //
   textAlign(CENTER, CENTER);
-  textFont(Font, bigSize);
+  //textFont("TimesNewRomanPS-BoldItalicMT", bigSize);
   text(quitText, QuitTX, QuitTY, QuitTW, QuitTH);
 }

@@ -5,11 +5,10 @@ float EnglishmanX, EnglishmanY, EnglishmanWidth, EnglishmanHeight;
 float quitX, quitY, QuitButtonW, QuitButtonH;
 float StartX, StartY, StartW, StartH;
 int NormalSize = 25, smallSize = 20, bigSize = 35;
-PFont Font, Font1, Bold, Font2, Font3;
-Font = createFont("TimesNewRomanPS-BoldItalicMT", 600);
 String quitText = "Exit (E)";
 float QuitTX, QuitTY, QuitTW, QuitTH;
 PFont QuitF;
+
 color sand = color(255, 229, 180);
 color red = color(255, 0, 0);
 color buttonFill;
@@ -58,6 +57,7 @@ void mousePressed() {
   if (mouseX >= startButtonX && mouseY >= startButtonY && mouseX <= startButtonX+startButtonWidth && mouseY <= startButtonY+startButtonHeight) {
     start=true;
   }
+  if (mouseX> quitX && mouseX< quitX+QuitButtonW && mouseY> quitY && mouseY< quitY+QuitButtonH) exit();
 }
 void keyPressed() {
   if (start==true) {
