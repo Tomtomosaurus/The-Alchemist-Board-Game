@@ -36,6 +36,14 @@ void setupPopulation() {
   radTSY = radians(degTSY);
   deg1 = -27.5;
   rad1 = radians(deg1);
+  deg2 = 90;
+  rad2 = radians(deg2);
+  deg3 = 15;
+  rad3 = radians(deg3);
+  deg4 = -45;
+  rad4 = radians(deg4);
+  deg5 = -75;
+  rad5 = radians(deg5);
   urimThummimNumber = random(1, 60);
   urimThummimNumberText = String.valueOf(urimThummimNumber);
   urimThummimNumberFont = createFont("Papyrus", height*5/16);
