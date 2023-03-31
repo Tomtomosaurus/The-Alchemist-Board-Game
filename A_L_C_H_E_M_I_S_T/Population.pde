@@ -38,4 +38,30 @@ void setupPopulation() {
   urimThummimNumberFont = createFont("Papyrus", height*5/16);
 }
 void drawPopulation() {
+  if (start) {
+    quitButtonWidth = width/5;
+    quitButtonHeight = height/8;
+    quitButtonX = width*4/5;
+    quitButtonY = height*7/8;
+    quitFont = createFont("Papyrus", width/20);
+  } else {
+    quitButtonWidth = width/10;
+    quitButtonHeight = height/20;
+    quitButtonX = width/2 - quitButtonWidth/2;
+    quitButtonY = startButtonY + startButtonHeight + width/20;
+    quitFont = createFont("Papyrus", width/50);
+  }
+  quitButtonTextWidth = quitButtonWidth;
+  quitButtonTextHeight = quitButtonHeight;
+  quitButtonTextX = quitButtonX;
+  quitButtonTextY = quitButtonY;
+  resetFont = quitFont;
+  resetButtonWidth = quitButtonWidth;
+  resetButtonHeight = quitButtonHeight;
+  resetButtonX = quitButtonX;
+  resetButtonY = quitButtonY - resetButtonHeight;
+  resetButtonTextWidth = quitButtonWidth;
+  resetButtonTextHeight = quitButtonHeight;
+  resetButtonTextX = quitButtonX;
+  resetButtonTextY = quitButtonY - resetButtonHeight;
 }

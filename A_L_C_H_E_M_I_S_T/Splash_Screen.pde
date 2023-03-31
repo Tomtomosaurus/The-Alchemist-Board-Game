@@ -13,7 +13,7 @@ void splashScreen() {
     } else {
       fill(255);
     }
-    textAlign(CENTER);
+    textAlign(CENTER, CENTER);
     text("START", startButtonX, startButtonY, startButtonWidth, startButtonHeight);
     fill(0);
     textAlign(LEFT);

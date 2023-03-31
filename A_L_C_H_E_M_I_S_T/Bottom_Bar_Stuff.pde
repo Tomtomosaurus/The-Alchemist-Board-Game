@@ -42,6 +42,10 @@ void bottomBar() {
       rect(width*4/10, height*7/8, width, height);
     }
   }
+  quitButton();
+  textFont(quitFont);
+  fill(255);
+  text("QUIT", quitButtonX, quitButtonY, quitButtonWidth, quitButtonHeight);
 }
 void bottomBarMousePressed() {
   if (mousePressed && urimThummimPressed == false && mouseX >= 0 && mouseY >= height*3/4 && mouseX <= width/5 && mouseY <= height*3/4+height/4) {

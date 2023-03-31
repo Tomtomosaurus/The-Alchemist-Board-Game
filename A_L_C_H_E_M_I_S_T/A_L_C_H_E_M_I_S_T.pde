@@ -2,13 +2,6 @@ float SantiagoX, SantiagoY, SantiagoWidth, SantiagoHeight;
 float FatimaX, FatimaY, FatimaWidth, FatimaHeight;
 float AlchemistX, AlchemistY, AlchemistWidth, AlchemistHeight;
 float EnglishmanX, EnglishmanY, EnglishmanWidth, EnglishmanHeight;
-float quitX, quitY, QuitButtonW, QuitButtonH;
-float StartX, StartY, StartW, StartH;
-int NormalSize = 25, smallSize = 20, bigSize = 35;
-String quitText = "Exit (E)";
-float QuitTX, QuitTY, QuitTW, QuitTH;
-PFont QuitF;
-
 color sand = color(255, 229, 180);
 color red = color(255, 0, 0);
 color buttonFill;
@@ -37,6 +30,7 @@ void setup() {
   Cursors();
 }
 void draw() {
+  drawPopulation();
   splashScreen();
   if (start==true) {
     desertBackground();
@@ -49,14 +43,24 @@ void draw() {
     numbers();
     bottomBar();
     bottomBarMousePressed();
+    resetButton();
   }
-  //debugging();
+  quitButton();
+  debugging();
 }
 void mousePressed() {
-  if (mouseX >= startButtonX && mouseY >= startButtonY && mouseX <= startButtonX+startButtonWidth && mouseY <= startButtonY+startButtonHeight) {
+  if (start == false && mouseX >= startButtonX && mouseY >= startButtonY && mouseX <= startButtonX+startButtonWidth && mouseY <= startButtonY+startButtonHeight) {
     start=true;
   }
-  if (mouseX> quitX && mouseX< quitX+QuitButtonW && mouseY> quitY && mouseY< quitY+QuitButtonH) exit();
+  if (mouseX >= quitButtonX && mouseY >= quitButtonY && mouseX <= quitButtonX + quitButtonWidth && mouseY <= quitButtonY + quitButtonHeight) exit();
+  if (mouseX >= resetButtonX && mouseY >= resetButtonY && mouseX <= resetButtonX + resetButtonWidth && mouseY <= resetButtonY + resetButtonHeight) {
+    SantiagoWin = false;
+    FatimaWin = false;
+    AlchemistWin = false;
+    EnglishmanWin = false;
+    start = false;
+    urimThummimPressed = false;
+  }
 }
 void keyPressed() {
   if (start==true) {
