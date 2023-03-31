@@ -17,5 +17,6 @@ void splashScreen() {
     text("START", startButtonX, startButtonY, startButtonWidth, startButtonHeight);
     fill(0);
     textAlign(LEFT);
+    quitButton();
   }
 }

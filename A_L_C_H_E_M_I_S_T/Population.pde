@@ -36,15 +36,6 @@ void setupPopulation() {
   urimThummimNumber = random(1, 60);
   urimThummimNumberText = String.valueOf(urimThummimNumber);
   urimThummimNumberFont = createFont("Papyrus", height*5/16);
-  quitX = width*4;
-  quitY = height*1/99999999;
-  QuitButtonW = width*1/3/2;
-  QuitButtonH = height*1/3*0.334;
-  StartX = width*1/3;
-  StartY = height*1/3;
-  StartW = width*1/3/2;
-  StartH = height*1/3*0.334;
-  
 }
 void drawPopulation() {
 }

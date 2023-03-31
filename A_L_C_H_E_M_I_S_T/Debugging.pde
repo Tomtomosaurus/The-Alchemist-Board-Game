@@ -1,3 +1,3 @@
-void debugging() {
+/*void debugging() {
   println("urimThummimPressed: ", urimThummimPressed);
-}
+}*/

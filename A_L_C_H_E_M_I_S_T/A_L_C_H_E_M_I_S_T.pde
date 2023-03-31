@@ -49,9 +49,8 @@ void draw() {
     numbers();
     bottomBar();
     bottomBarMousePressed();
-    quitButton();
   }
-  debugging();
+  //debugging();
 }
 void mousePressed() {
   if (mouseX >= startButtonX && mouseY >= startButtonY && mouseX <= startButtonX+startButtonWidth && mouseY <= startButtonY+startButtonHeight) {
