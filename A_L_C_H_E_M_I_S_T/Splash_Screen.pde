@@ -28,7 +28,6 @@ void splashScreen() {
       text("START", startButtonX, startButtonY, startButtonWidth, startButtonHeight);
       fill(0);
       textAlign(LEFT);
-      quitButton();
       fill(255);
       textAlign(CENTER, CENTER);
       textFont(titleFont);
@@ -70,13 +69,13 @@ void splashScreen() {
       textFont(ruleLineFont);
       fill(255);
       text(" 1. Each character is controlled by one person.", width/6, height/6, width*2/3, height/6);
-      text(" 2. You move foreward by the number shown on your die.", width/6, height*3/12, width*2/3, height/6);
+      text(" 2. You move foreward by the number shown on your die/number generator.", width/6, height*3/12, width*2/3, height/6);
       text(" 3. Your party may choose the maximum number on their generator (6 is recommended).", width/6, height*4/12, width*2/3, height/6);
-      text(" 4. After everyone has gone through 5 turns, click on Urim and Thummim to get a random number from 1 - 60.                                                           Everyone then votes on whether they should go up or down by that number.", width/6, height*5/12, width*2/3, height/6);
-      text(" 5. If you have moves left over in your turn and you land on the first or last tile, turn around and go the other way until your moves are used up.", width/6, height*6/12, width*2/3, height/6);
-      text(" 6. If you land on the top of a distraction, go to the square on the bottom end of it.", width/6, height*7/12, width*2/3, height/6);
-      text(" 7. If you land on the bottom of a traction, go to the square on the top end of it.", width/6, height*8/12, width*2/3, height/6);
-      text(" 8. Only one may realize their personal legend. Good luck!", width/6, height*9/12, width*2/3, height/6);
+      text(" 4. After a total rotation of 5 moves, click on Urim and Thummim. Everyone then votes on whether they should go up or down by the number shown.", width/6, height*5/12, width*2/3, height/6);
+      text(" 5. If you have moves left over in a turn and  land on an end tile, turn around and go the other way.", width/6, height*6/12+height/24, width*2/3, height/6);
+      text(" 6. If you land on the top of a distraction, go to the square on the bottom end of it.", width/6, height*7/12+height/24, width*2/3, height/6);
+      text(" 7. If you land on the bottom of a traction, go to the square on the top end of it.", width/6, height*8/12+height/24, width*2/3, height/6);
+      text(" 8. Only one may realize their personal legend. Good luck!", width/6, height*9/12+height/24, width*2/3, height/6);
     }
     //
     fill(255);

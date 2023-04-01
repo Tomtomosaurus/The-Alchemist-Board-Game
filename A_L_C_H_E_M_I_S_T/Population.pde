@@ -60,18 +60,26 @@ void setupPopulation() {
   ruleLineFont = createFont("Papyrus", width/70);
 }
 void drawPopulation() {
+  if (start==false && rules) {
+    quitButtonWidth = width/10;
+    quitButtonHeight = height/20;
+    quitButtonX = width/2+quitButtonWidth/2;
+    quitButtonY = height*5/6-quitButtonHeight;
+    quitFont = createFont("Papyrus", height/40);
+  }
+  if (start==false && rules == false) {
+    quitButtonWidth = width/10;
+    quitButtonHeight = height/20;
+    quitButtonX = width/2-quitButtonWidth/2;
+    quitButtonY = height*5/6-quitButtonHeight;
+    quitFont = createFont("Papyrus", height/40);
+  }
   if (start) {
     quitButtonWidth = width/5;
     quitButtonHeight = height/8;
-    quitButtonX = width*4/5;
-    quitButtonY = height*7/8;
-    quitFont = createFont("Papyrus", width/20);
-  } else {
-    quitButtonWidth = width/10;
-    quitButtonHeight = height/20;
-    quitButtonX = width/2 - quitButtonWidth/2;
-    quitButtonY = height*5/6-quitButtonHeight;
-    quitFont = createFont("Papyrus", width/50);
+    quitButtonX = width - quitButtonWidth;
+    quitButtonY = height - quitButtonHeight;
+    quitFont = createFont("Papyrus", height/20);
   }
   quitButtonTextWidth = quitButtonWidth;
   quitButtonTextHeight = quitButtonHeight;
