@@ -13,8 +13,12 @@ void Englishman() {
     EnglishmanY += EnglishmanY*-2;
   }
   if (EnglishmanX < width/10 && EnglishmanY < height/8) {
-    EnglishmanWin = true;
-    winAnimationEnglishman = true;
+    if (keyPressed) {
+      if (key == 'e' || key == 'E') {
+        EnglishmanWin = true;
+        winAnimationEnglishman = true;
+      }
+    }
   }
   if (winAnimationEnglishman) {
     if (EnglishmanX < width*9/10) {

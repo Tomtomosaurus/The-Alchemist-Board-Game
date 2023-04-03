@@ -13,15 +13,19 @@ void Santiago() {
     SantiagoY += SantiagoY*-1;
   }
   if (SantiagoX < width/10 && SantiagoY < height/8) {
-    SantiagoWin = true;
-    winAnimationSantiago = true;
+    if (keyPressed) {
+      if (key == 'e' || key == 'E') {
+        SantiagoWin = true;
+        winAnimationSantiago = true;
+      }
+    }
   }
   if (winAnimationSantiago) {
     if (SantiagoX < width*9/10) {
       if (SantiagoY < height/8) {
         SantiagoX += width/10;
       }
-      if (SantiagoY > height/4 && SantiagoY < height*3/8) {
+      if (SantiagoY >= height/4 && SantiagoY < height*3/8) {
         SantiagoX += width/10;
       }
       if (SantiagoY >= height/2 && SantiagoY < height*5/8) {
@@ -29,10 +33,10 @@ void Santiago() {
       }
     }
     if (SantiagoX > 0) {
-      if (SantiagoY > height/8 && SantiagoY < height/4) {
+      if (SantiagoY >= height/8 && SantiagoY < height/4) {
         SantiagoX -= width/10;
       }
-      if (SantiagoY > height*3/8 && SantiagoY < height/2) {
+      if (SantiagoY >= height*3/8 && SantiagoY < height/2) {
         SantiagoX -= width/10;
       }
       if (SantiagoY >= height*5/8 && SantiagoY < height*3/4) {

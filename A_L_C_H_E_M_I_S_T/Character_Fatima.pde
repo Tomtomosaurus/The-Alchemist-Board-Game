@@ -13,15 +13,19 @@ void Fatima() {
     FatimaY += FatimaY*-1;
   }
   if (FatimaX < width/10 && FatimaY < height/8) {
-    FatimaWin = true;
-    winAnimationFatima = true;
+    if (keyPressed) {
+      if (key == 'e' || key == 'E') {
+        FatimaWin = true;
+        winAnimationFatima = true;
+      }
+    }
   }
   if (winAnimationFatima) {
     if (FatimaX < width*9/10) {
       if (FatimaY < height/8) {
         FatimaX += width/10;
       }
-      if (FatimaY > height/4 && FatimaY < height*3/8) {
+      if (FatimaY >= height/4 && FatimaY < height*3/8) {
         FatimaX += width/10;
       }
       if (FatimaY >= height/2 && FatimaY < height*5/8) {
@@ -29,10 +33,10 @@ void Fatima() {
       }
     }
     if (FatimaX > width/10) {
-      if (FatimaY > height/8 && FatimaY < height/4) {
+      if (FatimaY >= height/8 && FatimaY < height/4) {
         FatimaX -= width/10;
       }
-      if (FatimaY > height*3/8 && FatimaY < height/2) {
+      if (FatimaY >= height*3/8 && FatimaY < height/2) {
         FatimaX -= width/10;
       }
       if (FatimaY >= height*5/8 && FatimaY < height*3/4) {

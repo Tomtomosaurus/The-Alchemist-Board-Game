@@ -13,8 +13,12 @@ void Alchemist() {
     AlchemistY += AlchemistY*-2;
   }
   if (AlchemistX < width/10 && AlchemistY < height/8) {
-    AlchemistWin = true;
-    winAnimationAlchemist = true;
+    if (keyPressed) {
+      if (key == 'e' || key == 'E') {
+        AlchemistWin = true;
+        winAnimationAlchemist = true;
+      }
+    }
   }
   if (winAnimationAlchemist) {
     if (AlchemistX < width*9/10) {
