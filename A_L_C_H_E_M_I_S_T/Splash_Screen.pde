@@ -71,7 +71,7 @@ void splashScreen() {
       text(" 1. Each character is controlled by one person.", width/6, height/6, width*2/3, height/6);
       text(" 2. You move foreward by the number shown on your die/number generator.", width/6, height*3/12, width*2/3, height/6);
       text(" 3. Your party may choose the maximum number on their generator (6 is recommended).", width/6, height*4/12, width*2/3, height/6);
-      text(" 4. After a total rotation of 5 moves, click on Urim and Thummim. Everyone then votes on whether they should go up or down by the number shown.", width/6, height*5/12, width*2/3, height/6);
+      text(" 4. After a total rotation of 5 moves, click on Urim and Thummim. Everyone then votes on whether they should go up or down by the number shown. One use only.", width/6, height*5/12, width*2/3, height/6);
       text(" 5. If you have moves left over in a turn and  land on an end tile, turn around and go the other way.", width/6, height*6/12+height/24, width*2/3, height/6);
       text(" 6. If you land on the top of a distraction, go to the square on the bottom end of it.", width/6, height*7/12+height/24, width*2/3, height/6);
       text(" 7. If you land on the bottom of a traction, go to the square on the top end of it.", width/6, height*8/12+height/24, width*2/3, height/6);
