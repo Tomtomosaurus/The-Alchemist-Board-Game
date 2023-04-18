@@ -1,2 +1,2 @@
-# The-Alchemist-Board-Game
-Music Program Planning
+# The Alchemist Board Game
+## Music Program Planning
