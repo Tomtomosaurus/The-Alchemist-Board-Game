@@ -25,6 +25,9 @@ boolean winAnimationSantiago = false, winAnimationFatima = false, winAnimationAl
 boolean urimThummimPressed = false;
 float degTSY, radTSY;
 float deg1, rad1;
+//Libraries and Dependancies
+
+//
 
 void setup() {
   background(150, 200, 255);
