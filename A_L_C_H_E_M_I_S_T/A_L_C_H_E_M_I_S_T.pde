@@ -7,6 +7,7 @@ color red = color(255, 0, 0);
 color buttonFill;
 color White = (#FFFFFF);
 color green = (#00FF00);
+color backgroundColor;
 PImage Santiago;
 PImage Fatima;
 PImage Alchemist;
@@ -24,6 +25,9 @@ boolean winAnimationSantiago = false, winAnimationFatima = false, winAnimationAl
 boolean urimThummimPressed = false;
 float degTSY, radTSY;
 float deg1, rad1;
+//Libraries and Dependancies
+
+//
 
 void setup() {
   background(150, 200, 255);
